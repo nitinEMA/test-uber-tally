@@ -16,7 +16,7 @@ func New() metrics.Metrics {
 	r := promreporter.NewReporter(promreporter.Options{})
 
 	scope, _ := tally.NewRootScope(tally.ScopeOptions{
-		Prefix:         "ts19",
+		Prefix:         "my_service",
 		Tags:           map[string]string{},
 		CachedReporter: r,
 		Separator:      promreporter.DefaultSeparator,
